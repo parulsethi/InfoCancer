@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">InfoCancer</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_infomenu">infomenu</string>
+    <string name="title_activity_diet">Diet</string>
+    <string name="title_activity_health_tips">HealthTips</string>
+    <string name="title_activity_htmen">HTmen</string>
+    <string name="title_activity_htwomen">HTwomen</string>
+    <string name="title_activity_htchild">HTchild</string>
+    <string name="title_activity_glossary">Glossary</string>
+    <string name="title_activity_records">Records</string>
+</resources>
