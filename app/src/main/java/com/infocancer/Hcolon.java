@@ -10,6 +10,21 @@ import android.widget.ListView;
 public class Hcolon extends ActionBarActivity {
 
     ListView healthtips;
+    String[] tips = {
+            "Maintain a healthy weight.",
+            "Exercise most days of the week.",
+            "Stop smoking.",
+            "Drink alcohol in moderation, if at all.",
+            "Eat a variety of fruits, vegetables and whole grains."
+    };
+
+    String[] description = {
+            "If you are at a healthy weight, work to maintain your weight by combining a healthy diet with daily exercise. If you need to lose weight, ask your doctor about healthy ways to achieve your goal. Aim to lose weight slowly by increasing the amount of exercise you get and reducing the number of calories you eat.",
+            "Try to get at least 30 minutes of exercise on most days. If you've been inactive, start slowly and build up gradually to 30 minutes. Also, talk to your doctor before starting any exercise program.",
+            "Talk to your doctor about ways to quit that may work for you.",
+            "If you choose to drink alcohol, limit the amount of alcohol you drink to no more than one drink a day for women and two for men.",
+            "Fruits, vegetables and whole grains contain vitamins, minerals, fiber and antioxidants, which may play a role in cancer prevention. Choose a variety of fruits and vegetables so that you get an array of vitamins and nutrients."
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

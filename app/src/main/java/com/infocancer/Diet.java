@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -18,12 +20,23 @@ public class Diet extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet);
 
-        food_list = (ListView) findViewById(R.id.diet_list);
+        descriptionCardView.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver
+                .OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                detailProductDescription.getViewTreeObserver().removeOnPreDrawListener(this);
+                // save the full height
+                descriptionViewFullHeight = detailProductDescription.getHeight();
 
-        ArrayList<Patient_info> arraylist = DB_prscrbtn.getAllPrscrbtntData();
+                // initially changing the height to min height
+                ViewGroup.LayoutParams layoutParams = descriptionCardView.getLayoutParams();
+                layoutParams.height = (int) getActivity().getResources().getDimension(R.dimen
+                        .product_description_min_height);
+                descriptionCardView.setLayoutParams(layoutParams);
 
-        adaptor = new HistoryListAdaptor(Diet.this, arraylist);
-        food_list.setAdapter(adaptor);
+                return true;
+            }
+        });
     }
 
     @Override

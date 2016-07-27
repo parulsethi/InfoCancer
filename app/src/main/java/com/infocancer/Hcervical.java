@@ -10,7 +10,19 @@ import android.widget.ListView;
 public class Hcervical extends ActionBarActivity {
 
     ListView healthtips;
+    String[] tips = {
+            "Get vaccinated against HPV.",
+            "Have routine Pap tests.",
+            "Practice safe sex.",
+            "Don't smoke."
+    };
 
+    String[] description = {
+            "Vaccination is available for girls and women ages 9 to 26. The vaccine is most effective if given to girls before they become sexually active.",
+            "Pap tests can detect precancerous conditions of the cervix, so they can be monitored or treated in order to prevent cervical cancer. Most medical organizations suggest women begin routine Pap tests at age 21 and repeat them every few years.",
+            "Using a condom, having fewer sexual partners and delaying intercourse may reduce your risk of cervical cancer.",
+            "If you smoke, quit. If you don't smoke, don't start.Smoking increases your risk of cervical cancer, as well as many other types of cancer."
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
