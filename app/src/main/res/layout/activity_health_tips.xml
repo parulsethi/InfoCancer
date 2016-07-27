@@ -9,17 +9,43 @@
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/hwomen.jpeg"
-        android:id="@+id/hwomen"/>
+        android:src="@drawable/breast.jpeg"
+        android:id="@+id/cbreast"/>
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/hmen.jpeg"
-        android:id="@+id/hmen"/>
+        android:src="@drawable/cervical.jpeg"
+        android:id="@+id/ccervical"/>
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/children.jpeg"
-        android:id="@+id/hchild"/>
+        android:src="@drawable/colon.jpeg"
+        android:id="@+id/ccolon"/>
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lung.jpeg"
+        android:id="@+id/clung"/>
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mouth.jpeg"
+        android:id="@+id/cmouth"/>
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/prostate.jpeg"
+        android:id="@+id/cprostate"/>
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/skin.jpeg"
+        android:id="@+id/cskin"/>
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/stomach.jpeg"
+        android:id="@+id/cstomach"/>
+
 
 </RelativeLayout>

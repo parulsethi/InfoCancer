@@ -11,4 +11,12 @@
     <string name="title_activity_htchild">HTchild</string>
     <string name="title_activity_glossary">Glossary</string>
     <string name="title_activity_records">Records</string>
+    <string name="title_activity_hbreast">Hbreast</string>
+    <string name="title_activity_hmouth">Hmouth</string>
+    <string name="title_activity_hcolon">Hcolon</string>
+    <string name="title_activity_hcervical">Hcervical</string>
+    <string name="title_activity_hprostate">Hprostate</string>
+    <string name="title_activity_hlung">Hlung</string>
+    <string name="title_activity_hstomach">Hstomach</string>
+    <string name="title_activity_hskin">Hskin</string>
 </resources>

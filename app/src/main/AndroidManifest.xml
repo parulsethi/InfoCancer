@@ -29,24 +29,44 @@
             android:label="@string/title_activity_health_tips" >
         </activity>
         <activity
-            android:name=".HTmen"
-            android:label="@string/title_activity_htmen" >
-        </activity>
-        <activity
-            android:name=".HTwomen"
-            android:label="@string/title_activity_htwomen" >
-        </activity>
-        <activity
-            android:name=".HTchild"
-            android:label="@string/title_activity_htchild" >
-        </activity>
-        <activity
             android:name=".Glossary"
             android:label="@string/title_activity_glossary" >
         </activity>
         <activity
             android:name=".Records"
             android:label="@string/title_activity_records" >
+        </activity>
+        <activity
+            android:name=".Hbreast"
+            android:label="@string/title_activity_hbreast" >
+        </activity>
+        <activity
+            android:name=".Hmouth"
+            android:label="@string/title_activity_hmouth" >
+        </activity>
+        <activity
+            android:name=".Hcolon"
+            android:label="@string/title_activity_hcolon" >
+        </activity>
+        <activity
+            android:name=".Hcervical"
+            android:label="@string/title_activity_hcervical" >
+        </activity>
+        <activity
+            android:name=".Hprostate"
+            android:label="@string/title_activity_hprostate" >
+        </activity>
+        <activity
+            android:name=".Hlung"
+            android:label="@string/title_activity_hlung" >
+        </activity>
+        <activity
+            android:name=".Hstomach"
+            android:label="@string/title_activity_hstomach" >
+        </activity>
+        <activity
+            android:name=".Hskin"
+            android:label="@string/title_activity_hskin" >
         </activity>
     </application>
 
