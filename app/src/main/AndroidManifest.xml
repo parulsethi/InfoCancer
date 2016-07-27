@@ -17,10 +17,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".infomenu"
-            android:label="@string/title_activity_infomenu" >
-        </activity>
-        <activity
             android:name=".Diet"
             android:label="@string/title_activity_diet" >
         </activity>
@@ -67,6 +63,26 @@
         <activity
             android:name=".Hskin"
             android:label="@string/title_activity_hskin" >
+        </activity>
+        <activity
+            android:name=".Information"
+            android:label="@string/title_activity_information" >
+        </activity>
+        <activity
+            android:name=".Hospitals_list"
+            android:label="@string/title_activity_hospitals_list" >
+        </activity>
+        <activity
+            android:name=".NGO_list"
+            android:label="@string/title_activity_ngo_list" >
+        </activity>
+        <activity
+            android:name=".Types"
+            android:label="@string/title_activity_types" >
+        </activity>
+        <activity
+            android:name=".CancerType"
+            android:label="@string/title_activity_cancer_type" >
         </activity>
     </application>
 

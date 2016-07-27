@@ -19,4 +19,9 @@
     <string name="title_activity_hlung">Hlung</string>
     <string name="title_activity_hstomach">Hstomach</string>
     <string name="title_activity_hskin">Hskin</string>
+    <string name="title_activity_information">Information</string>
+    <string name="title_activity_hospitals_list">Hospitals_list</string>
+    <string name="title_activity_ngo_list">NGO_list</string>
+    <string name="title_activity_types">Types</string>
+    <string name="title_activity_cancer_type">CancerType</string>
 </resources>
