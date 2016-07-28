@@ -1,9 +1,14 @@
 package com.infocancer;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 public class Information extends ActionBarActivity {
@@ -12,6 +17,56 @@ public class Information extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
+
+        TextView tumor = (TextView) findViewById(R.id.info_tumor);
+        TextView type = (TextView) findViewById(R.id.info_type);
+        TextView cause = (TextView) findViewById(R.id.info_causes);
+        TextView tips = (TextView) findViewById(R.id.info_htips);
+        TextView food = (TextView) findViewById(R.id.info_food);
+        TextView glossary = (TextView) findViewById(R.id.info_glossary);
+
+        tumor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Tumor.class);
+                startActivity(intent);
+            }
+        });
+        type.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Types.class);
+                startActivity(intent);
+            }
+        });
+        cause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Causes.class);
+                startActivity(intent);
+            }
+        });
+        tips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),HealthTips.class);
+                startActivity(intent);
+            }
+        });
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Diet.class);
+                startActivity(intent);
+            }
+        });
+        glossary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Glossary.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

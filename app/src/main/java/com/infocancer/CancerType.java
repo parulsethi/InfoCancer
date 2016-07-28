@@ -24,8 +24,14 @@ public class CancerType extends ActionBarActivity {
         String typ = intent.getStringExtra(Types.type);
 
         if (typ == "breast") {
-            desc1.setText("");
-            desc2.setText("");
+            desc1.setText("Breast cancer starts when cells in the breast begin to grow out of control. These cells usually form a tumor that can often be seen on an x-ray or felt as a lump. The tumor is malignant (cancerous) if the cells can grow into (invade) surrounding tissues or spread (metastasize) to distant areas of the body. Breast cancer occurs almost entirely in women, but men can get it, too.");
+            desc2.setText("Breast cancers can start from different parts of the breast. Most breast cancers begin in the ducts that carry milk to the nipple (ductal cancers). Some start in the glands that make breast milk (lobular cancers).There are also other types of breast cancer that are less common.\n" +
+                    "\n" +
+                    "A small number of cancers start in other tissues in the breast. These cancers are called sarcomas and lymphomas and are not really thought of as breast cancers.\n" +
+                    "\n" +
+                    "Although many types of breast cancer can cause a lump in the breast, not all do. There are other symptoms of breast cancer you should watch out for and report to a health care provider.\n" +
+                    "\n" +
+                    "It’s also important to understand that most breast lumps are not cancer, they are benign. Benign breast tumors are abnormal growths, but they do not spread outside of the breast and they are not life threatening. But some benign breast lumps can increase a woman's risk of getting breast cancer. Any breast lump or change needs to be checked by a health care provider to determine whether it is benign or cancer, and whether it might impact your future cancer risk. ");
             img.setImageResource(R.drawable.dbreast);
         }
         if (typ == "colon") {
