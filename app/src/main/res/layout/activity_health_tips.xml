@@ -9,18 +9,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
         xmlns:tools="http://schemas.android.com/tools"
         tools:context="com.infocancer.HealthTips"
         android:orientation="vertical">
 
     <ImageButton
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:src="@drawable/breast"
         android:id="@+id/cbreast"/>
     <ImageButton
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:src="@drawable/cervical"
         android:id="@+id/ccervical"/>
