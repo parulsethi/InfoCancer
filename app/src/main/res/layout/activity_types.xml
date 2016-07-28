@@ -1,79 +1,100 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FEFFEA"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.infocancer.Types">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="110dp"
+        android:text="Breast Cancer"
+        android:background="#d17173"
+        android:id="@+id/tbreast" />
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:text="Cervical Cancer"
+        android:background="#8e8971"
+        android:id="@+id/tcervical"
+        android:layout_marginLeft="8dp" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+        android:layout_width="160dp"
+        android:layout_height="110dp"
+        android:text="Colon Cancer"
+        android:background="#8da8a1"
+        android:id="@+id/tcolon"
+            android:layout_marginTop="8dp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:text="Oral Cancer"
+        android:background="#bbcdb5"
+        android:id="@+id/tmouth"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:orientation="horizontal">
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/button"
-        android:id="@+id/button2" />
+        android:layout_width="160dp"
+        android:layout_height="110dp"
+        android:text="Prostate Cancer"
+        android:background="#65666a"
+        android:id="@+id/tprostate"
+        android:layout_below="@+id/tcolon"
+        android:layout_marginTop="8dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button3"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toEndOf="@+id/button2" />
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:text="Skin Cancer"
+        android:background="#a59ba7"
+        android:id="@+id/tskin"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" />
+        </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="110dp"
+        android:text="Stomach Cancer"
+        android:background="#e7d1be"
+        android:id="@+id/tstomach"
+        android:layout_below="@+id/tskin"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/button3" />
+        android:layout_marginTop="8dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button5"
-        android:layout_alignBottom="@+id/button4"
-        android:layout_toEndOf="@+id/button4" />
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:text="Lung Cancer"
+        android:background="#79879f"
+        android:id="@+id/tlung"
+        android:layout_below="@+id/tskin"
+        android:layout_alignEnd="@+id/tcolon"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button6"
-        android:layout_marginTop="57dp"
-        android:layout_alignTop="@+id/button8"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/button7"
-        android:layout_toStartOf="@+id/button2" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button7"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/button8"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button8"
-        android:layout_below="@+id/button5"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/button2"
-        android:layout_above="@+id/button7" />
-
-
-</RelativeLayout>
+</LinearLayout>
+</LinearLayout>

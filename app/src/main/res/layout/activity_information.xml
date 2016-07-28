@@ -27,37 +27,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_tumor"
-        android:background=""
+        android:background="#ECEFF1"
         android:text="Tumor: Benign vs. Malignant"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_type"
-        android:background=""
+        android:background="#CFD8DC"
         android:text="Types of Cancer"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_causes"
-        android:background=""
+        android:background="#B0BEC5"
         android:text="Causes of Cancer"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_htips"
-        android:background=""
+        android:background="#90A4AE"
         android:text="Health Tips"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_food"
-        android:background=""
+        android:background="#78909C"
         android:text="Cancer Preventive Food"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_glossary"
-        android:background=""
+        android:background="#607D8B"
         android:text="Glossary"/>
 
 </LinearLayout>

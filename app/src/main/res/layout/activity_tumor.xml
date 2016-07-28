@@ -1,44 +1,63 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="#FEFFEA"
+    android:layout_marginTop="1dp">
+
+    <LinearLayout
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.infocancer.Tumor">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#FEFFEA"
+    tools:context="com.infocancer.Tumor">
 
     <TextView android:text="Benign Tumor" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textColor="#ec182b4f"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/b_desc1"/>
+        android:id="@+id/b_desc1"
+        android:textColor="#ec182b4f"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/benign"/>
+        android:src="@drawable/benign"
+        android:layout_marginTop="2dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/b_desc2"/>
+        android:id="@+id/b_desc2"
+        android:textColor="#ec182b4f"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="Malignant Tumor"/>
+        android:text="Malignant Tumor"
+        android:textColor="#ec182b4f"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/m_desc1"/>
+        android:id="@+id/m_desc1"
+        android:textColor="#ec182b4f"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/malignant"/>
+        android:src="@drawable/malignant"
+        android:layout_marginTop="2dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/m_desc2"/>
+        android:id="@+id/m_desc2"
+        android:textColor="#ec182b4f"/>
 
 </LinearLayout>
+</ScrollView>

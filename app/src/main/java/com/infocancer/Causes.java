@@ -4,28 +4,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
-public class Diet extends ActionBarActivity {
-    ListView food_list;
+public class Causes extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diet);
-
+        setContentView(R.layout.activity_causes);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_diet, menu);
+        getMenuInflater().inflate(R.menu.menu_causes, menu);
         return true;
     }
 

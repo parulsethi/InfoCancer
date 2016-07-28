@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class Glossary extends ActionBarActivity {
     ListView glossary;
     String[] terms = {
-            "Acute","Benign","Biopsy","Bone marrow","Cancer","Carcinoma","Cells","Chemoprevention","Chemotherapy","Chronic","Imaging test","In situ","Invasive cancer","Leukemia","Lymph nodes","Lymphatic system","Lymphoma","Oncologist","Oncology","Pathologist","Polyp","Precancerous","Predisposition","Prognosis","Sarcoma","Screening","Stage","Tumor"};
+            "Acute","Benign","Biopsy","Bone marrow","Cancer","Carcinoma","Cells","Chemoprevention","Chemotherapy","Chronic","In situ","Invasive cancer","Leukemia","Lymph nodes","Lymphatic system","Lymphoma","Oncologist","Oncology","Polyp","Precancerous","Predisposition","Prognosis","Sarcoma","Screening","Stage","Tumor"};
     String[] termdefs ={
             "Refers to symptoms that start and worsen quickly but do not last over a long time",
             "Refers to a tumor that is not cancerous. The tumor does not usually invade nearby tissue or spread to other parts of the body",
@@ -23,7 +23,7 @@ public class Glossary extends ActionBarActivity {
             "Cancer that starts in skin or tissues that line the inside or cover the outside of internal organs",
             "The basic units that make up the human body",
             "The use of natural, synthetic (made in a laboratory), or biologic (from a living source) substances to reverse, slow down, or prevent the development of cancer. Learn more about chemoprevention",
-            "The use of drugs to kill cancer cells. Learn more about chemotherapy",
+            "The use of drugs to kill cancer cells.",
             "Refers to a disease or condition that persists, often slowly, over a long time",
             "In place. Refers to cancer that has not spread to nearby tissue, also called non-invasive cancer",
             "Cancer that has spread outside the layer of tissue in which it started and has the potential to grow into other tissues or parts of the body, also called infiltrating cancer",
@@ -37,7 +37,7 @@ public class Glossary extends ActionBarActivity {
             "A growth of normal tissue that usually sticks out from the lining of an organ, such as the colon",
             "Refers to cells that have the potential to become cancerous. Also called pre-malignant",
             "A tendency to develop a disease that can be triggered under certain conditions. For example, although a genetic predisposition to cancer increases a person's risk of developing cancer, it is not certain that the person will develop it. Learn more about genetics",
-            "A cancer that develops in the tissues that support and connect the body, such as fat and muscle. Learn more about sarcoma",
+            "A cancer that develops in the tissues that support and connect the body, such as fat and muscle.",
             "The process of checking whether a person has a disease or has an increased chance of developing a disease when the person has no symptoms",
             "A way of describing cancer, such as where it is located, whether or where it has spread, and whether it is affecting the functions of other organs in the body. Learn more about stages of cancer",
             "A mass formed when normal cells begin to change and grow uncontrollably. A tumor can be benign (noncancerous) or malignant (cancerous, meaning it can spread to other parts of the body). Also called a nodule or mass"

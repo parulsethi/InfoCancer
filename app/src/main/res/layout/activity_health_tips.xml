@@ -1,52 +1,61 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.infocancer.HealthTips">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="#FEFFEA"
+    android:layout_marginTop="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.infocancer.HealthTips"
+        android:orientation="vertical">
 
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/breast.jpeg"
+        android:src="@drawable/breast"
         android:id="@+id/cbreast"/>
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/cervical.jpeg"
+        android:src="@drawable/cervical"
         android:id="@+id/ccervical"/>
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/colon.jpeg"
+        android:src="@drawable/colon"
         android:id="@+id/ccolon"/>
     <ImageButton
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/lung"
         android:id="@+id/clung"
         android:layout_alignParentEnd="true" />
     <ImageButton
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/mouth.jpeg"
+        android:src="@drawable/mouth"
         android:id="@+id/cmouth"/>
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/prostate.jpeg"
+        android:src="@drawable/prostate"
         android:id="@+id/cprostate"/>
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/skin.jpeg"
+        android:src="@drawable/skin"
         android:id="@+id/cskin"/>
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/stomach.jpeg"
+        android:src="@drawable/stomach"
         android:id="@+id/cstomach"/>
 
 
-</RelativeLayout>
+</LinearLayout>
+</ScrollView>

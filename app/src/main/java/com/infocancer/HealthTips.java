@@ -1,9 +1,11 @@
 package com.infocancer;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
 
 import java.util.ArrayList;
@@ -25,6 +27,63 @@ public class HealthTips extends ActionBarActivity {
         ImageButton prostate = (ImageButton) findViewById(R.id.cprostate);
         ImageButton skin = (ImageButton) findViewById(R.id.cskin);
         ImageButton stomach = (ImageButton) findViewById(R.id.cstomach);
+
+        breast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hbreast.class);
+                startActivity(intent);
+            }
+        });
+        cervical.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hcervical.class);
+                startActivity(intent);
+            }
+        });
+        colon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hcolon.class);
+                startActivity(intent);
+            }
+        });
+        lung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hlung.class);
+                startActivity(intent);
+            }
+        });
+        mouth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hmouth.class);
+                startActivity(intent);
+            }
+        });
+        prostate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hprostate.class);
+                startActivity(intent);
+            }
+        });
+        skin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hskin.class);
+                startActivity(intent);
+            }
+        });
+        stomach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hstomach.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

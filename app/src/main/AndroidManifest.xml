@@ -88,6 +88,10 @@
             android:name=".Tumor"
             android:label="@string/title_activity_tumor" >
         </activity>
+        <activity
+            android:name=".Causes"
+            android:label="@string/title_activity_causes" >
+        </activity>
     </application>
 
 </manifest>
