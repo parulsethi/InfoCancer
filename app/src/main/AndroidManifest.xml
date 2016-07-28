@@ -84,6 +84,10 @@
             android:name=".CancerType"
             android:label="@string/title_activity_cancer_type" >
         </activity>
+        <activity
+            android:name=".Tumor"
+            android:label="@string/title_activity_tumor" >
+        </activity>
     </application>
 
 </manifest>
