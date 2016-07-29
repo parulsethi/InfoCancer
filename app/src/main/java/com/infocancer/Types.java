@@ -48,7 +48,7 @@ public class Types extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent3 = new Intent(getApplicationContext(),CancerType.class);
-                intent3.putExtra(type,"colon");
+                intent3.putExtra(type,"colorectal");
                 startActivity(intent3);
             }
         });

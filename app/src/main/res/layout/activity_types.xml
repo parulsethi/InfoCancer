@@ -33,7 +33,7 @@
         <Button
         android:layout_width="160dp"
         android:layout_height="110dp"
-        android:text="Colon Cancer"
+        android:text="Colorectal Cancer"
         android:background="#8da8a1"
         android:id="@+id/tcolon"
             android:layout_marginTop="8dp" />
