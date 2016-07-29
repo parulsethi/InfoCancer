@@ -52,7 +52,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/obesity"/>
+            android:src="@drawable/alcohol"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/obesity"/>
+            android:src="@drawable/pollution"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/obesity"/>
+            android:src="@drawable/hpv"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/obesity"/>
+            android:src="@drawable/sun"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/obesity"/>
+            android:src="@drawable/genes"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -147,7 +147,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/obesity"/>
+            android:src="@drawable/workplace"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/obesity"/>
+            android:src="@drawable/diet"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
