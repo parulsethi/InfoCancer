@@ -17,11 +17,43 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         ImageButton minfo = (ImageButton) findViewById(R.id.m_info);
+        ImageButton mrecord = (ImageButton) findViewById(R.id.m_record);
+        ImageButton mreminder = (ImageButton) findViewById(R.id.m_reminder);
+        ImageButton mhospital = (ImageButton) findViewById(R.id.m_hospital);
+        ImageButton mngo = (ImageButton) findViewById(R.id.m_ngo);
 
         minfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),Information.class);
+                startActivity(intent);
+            }
+        });
+        mrecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Records.class);
+                startActivity(intent);
+            }
+        });
+        mreminder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Information.class);
+                startActivity(intent);
+            }
+        });
+        mhospital.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Hospitals_list.class);
+                startActivity(intent);
+            }
+        });
+        mngo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),NGO_list.class);
                 startActivity(intent);
             }
         });
