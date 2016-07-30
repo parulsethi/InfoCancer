@@ -92,6 +92,14 @@
             android:name=".Causes"
             android:label="@string/title_activity_causes" >
         </activity>
+        <activity
+            android:name=".Add_record"
+            android:label="@string/title_activity_add_record" >
+        </activity>
+        <activity
+            android:name=".ViewRecord"
+            android:label="@string/title_activity_view_record" >
+        </activity>
     </application>
 
 </manifest>

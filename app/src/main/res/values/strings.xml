@@ -25,4 +25,6 @@
     <string name="title_activity_cancer_type">CancerType</string>
     <string name="title_activity_tumor">Tumor</string>
     <string name="title_activity_causes">Causes</string>
+    <string name="title_activity_add_record">Add_record</string>
+    <string name="title_activity_view_record">ViewRecord</string>
 </resources>
