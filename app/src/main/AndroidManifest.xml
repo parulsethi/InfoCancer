@@ -4,7 +4,9 @@
 
     <!-- Accessing camera hardware -->
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -104,6 +106,15 @@
             android:name=".ViewRecord"
             android:label="@string/title_activity_view_record" >
         </activity>
+        <activity
+            android:name=".Reminder"
+            android:label="@string/title_activity_reminder" >
+        </activity>
+
+        <service android:name=".mAlarmService" android:enabled="true" />
+        <receiver android:name=".mReciever"/>
+
     </application>
+
 
 </manifest>
