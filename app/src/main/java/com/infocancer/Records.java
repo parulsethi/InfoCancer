@@ -1,22 +1,44 @@
 package com.infocancer;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 public class Records extends ActionBarActivity {
 
     Button add;
+    ListView record;
+    RecordListAdaptor adaptor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_records);
+
+        record = (ListView) findViewById(R.id.record_list);
+
+        DB.init(this);
+        ArrayList<Patient_info> arraylist = DB.getAllReportData();
+
+        adaptor = new RecordListAdaptor(Records.this, arraylist);
+        record.setAdapter(adaptor);
 
         add = (Button) findViewById(R.id.add_record);
 
@@ -28,6 +50,60 @@ public class Records extends ActionBarActivity {
             }
         });
     }
+
+    class RecordListAdaptor extends BaseAdapter {
+
+        Context context;
+        LayoutInflater inflater;
+        ArrayList<Patient_info> data;
+
+        public RecordListAdaptor(Context context,
+                                 ArrayList<Patient_info> arraylist) {
+            // super();
+            this.context = context;
+            data = arraylist;
+        }
+
+        @Override
+        public int getCount() {
+            return data.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+            //return arraylist.get(position).get(PRICE);
+        }
+
+        @Override
+        public View getView(final int position, View convertView, ViewGroup parent) {
+
+            TextView title;
+            TextView date;
+
+            inflater = (LayoutInflater) context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            View itemView = inflater.inflate(R.layout.record_list_item, parent, false);
+            // Get the position
+            final Patient_info resultp = data.get(position);
+
+            title = (TextView) itemView.findViewById(R.id.rltitle);
+            date = (TextView) itemView.findViewById(R.id.rldate);
+
+            title.setText(resultp.gettitle());
+            date.setText(resultp.getdate());
+
+            return itemView;
+
+        }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

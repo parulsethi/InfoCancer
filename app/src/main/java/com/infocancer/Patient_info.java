@@ -9,14 +9,22 @@ public class Patient_info {
     public Patient_info(){
     }
     // constructor
-    public Patient_info(String name, String id,byte[] report_image,String date,String title, String diagnose,byte[] prscrbtn_image){
+    public Patient_info(String name,String date,String title, String diagnose,byte[] prscrbtn_image,byte[] report_image){
         this._name = name;
-        this._id = id;
         this._report_image = report_image;
         this._date = date;
         this._diagnose = diagnose;
         this._prscrbtn_image = prscrbtn_image;
         this._title = title;
+    }
+    public Patient_info(String name,String id,String date,String title, String diagnose,byte[] prscrbtn_image,byte[] report_image){
+        this._name = name;
+        this._report_image = report_image;
+        this._date = date;
+        this._diagnose = diagnose;
+        this._prscrbtn_image = prscrbtn_image;
+        this._title = title;
+        this._id = id;
     }
 
     // getting name

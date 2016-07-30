@@ -3,6 +3,7 @@ package com.infocancer;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -17,6 +18,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,7 +29,9 @@ public class AddRecord extends ActionBarActivity {
 
     EditText title,date,doctor,diagnose;
     ImageView p_preview,r_preview;
-    Button p_click,r_click;
+    Button p_click,r_click,save;
+    byte[] p_img,r_img;
+    String dtitle,ddate,ddiagnose,ddoctor;
 
     // Activity request codes
     private static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE = 100;
@@ -50,6 +54,7 @@ public class AddRecord extends ActionBarActivity {
         r_click = (Button) findViewById(R.id.r_button);
         p_preview = (ImageView) findViewById(R.id.p_img);
         r_preview = (ImageView) findViewById(R.id.r_img);
+        save = (Button) findViewById(R.id.save_bt);
 
         p_click.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +62,33 @@ public class AddRecord extends ActionBarActivity {
                 captureImage();
             }
         });
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DB.init(getApplicationContext());
+                Bitmap b1 = ((BitmapDrawable)p_preview.getDrawable()).getBitmap();
+                Bitmap b2 = ((BitmapDrawable)p_preview.getDrawable()).getBitmap();
+                ByteArrayOutputStream bos1=new ByteArrayOutputStream();
+                ByteArrayOutputStream bos2 = new ByteArrayOutputStream();
+                b1.compress(Bitmap.CompressFormat.PNG, 100, bos1);
+                b2.compress(Bitmap.CompressFormat.PNG, 100, bos2);
+
+                p_img=bos1.toByteArray();
+                r_img=bos2.toByteArray();
+                dtitle = title.getText().toString();
+                ddoctor = doctor.getText().toString();
+                ddiagnose= diagnose.getText().toString();
+                ddate = date.getText().toString();
+
+                DB.add_report(new Patient_info(ddoctor,ddate,dtitle,ddiagnose,p_img,r_img));
+                Toast.makeText(getApplicationContext(), "Record Saved.", Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(getApplicationContext(),Records.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -76,11 +108,6 @@ public class AddRecord extends ActionBarActivity {
                 // successfully captured the image
                 // display it in image view
                 previewCapturedImage();
-            } else if (resultCode == RESULT_CANCELED) {
-                // user cancelled Image capture
-                Toast.makeText(getApplicationContext(),
-                        "User cancelled image capture", Toast.LENGTH_SHORT)
-                        .show();
             } else {
                 // failed to capture image
                 Toast.makeText(getApplicationContext(),
@@ -94,16 +121,13 @@ public class AddRecord extends ActionBarActivity {
         try {
             p_preview.setVisibility(View.VISIBLE);
 
-            // bimatp factory
             BitmapFactory.Options options = new BitmapFactory.Options();
 
-            // downsizing image as it throws OutOfMemory Exception for larger
-            // images
+            // downsizing image as it throws OutOfMemory Exception for larger images
             options.inSampleSize = 8;
 
             final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
                     options);
-
             p_preview.setImageBitmap(bitmap);
         } catch (NullPointerException e) {
             e.printStackTrace();
