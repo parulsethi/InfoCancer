@@ -40,7 +40,7 @@ public class DB{
 
     private static final String[] ALL_TABLES = {REPORT};
 
-    private static final String USER_CREATE = "create table reports(name text not null," + "id text not null,"+"prescribtion_img blob,"+"report_img blob"+"date text not null,"+"diagnose text not null,"+"title text not null);";
+    private static final String USER_CREATE = "create table reports(title text not null," + "id text not null,"+"date text not null,"+"name text not null,"+"diagnose text not null,"+"prescribtion_img blob,"+"report_img blob);";
     /**
      * ****** Used to open database in syncronized way ********
      */
@@ -140,10 +140,8 @@ public class DB{
     public static ArrayList<Patient_info> getAllReportData() {
 
         final SQLiteDatabase db = open1();
-        // Select All Query
+
         String selectQuery = "SELECT  * FROM " + REPORT;
-        String name,id,date,tname;
-        byte[] image;
         ArrayList<Patient_info> contactList = new ArrayList<Patient_info>();
 
         // Open database for Read / Write
