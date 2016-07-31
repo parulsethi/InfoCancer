@@ -40,7 +40,7 @@
                     android:gravity="center_horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Garlic" />
+                    android:text="GARLIC" />
                 <TextView
                     android:textColor="#ec182b4f"
                     android:layout_marginLeft="6dp"
