@@ -1,52 +1,64 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context=".MainActivity"
-    android:background="@drawable/tag1">
+    android:background="@drawable/main_background">
 
-    <ImageView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:src="@drawable/title"
-        android:layout_alignParentStart="true" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="InfoCancer"
+        android:textStyle="bold"
+        android:textSize="37sp"
+        android:gravity="center_horizontal"
+        android:background="#01579B"/>
 
     <LinearLayout
+        android:background="#000000"
         android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="#01579B"
+        android:layout_marginRight="1dp"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
         android:id="@+id/m_info"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginRight="0dp"/>
+        android:src="@drawable/info_icon"/>
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="#01579B"
+        android:layout_marginRight="1dp"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
         android:id="@+id/m_record"
-        android:layout_alignBottom="@+id/m_info"
-        android:layout_toEndOf="@+id/m_info" />
+        android:src="@drawable/record_icon"/>
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="#01579B"
+        android:layout_marginRight="1dp"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
         android:id="@+id/m_reminder"
-        android:layout_alignBottom="@+id/m_record"
-        android:layout_toEndOf="@+id/m_record" />
+        android:src="@drawable/reminder_icon"/>
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="#01579B"
+        android:layout_marginRight="1dp"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
         android:id="@+id/m_hospital"
-        android:layout_alignBottom="@+id/m_reminder" />
+        android:src="@drawable/hospital_icon" />
+
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="#01579B"
+        android:layout_marginRight="1dp"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
         android:id="@+id/m_ngo"
-        android:layout_alignBottom="@+id/m_hospital"
-        android:layout_toEndOf="@+id/m_hospital" />
+        android:src="@drawable/ngo_icon"/>
+
 </LinearLayout>
 </RelativeLayout>
