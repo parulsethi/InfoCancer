@@ -28,36 +28,55 @@
         android:layout_height="wrap_content"
         android:id="@+id/info_tumor"
         android:background="#ECEFF1"
-        android:text="Tumor: Benign vs. Malignant"/>
+        android:text="Tumor: Benign vs. Malignant"
+        android:layout_margin="4dp"
+        android:padding="5dp"
+        android:textSize="23sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_type"
         android:background="#CFD8DC"
-        android:text="Types of Cancer"/>
+        android:text="Types of Cancer"
+        android:layout_margin="4dp"
+        android:padding="5dp"
+        android:textSize="23sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_causes"
         android:background="#B0BEC5"
-        android:text="Causes of Cancer"/>
+        android:text="Causes of Cancer"
+        android:layout_margin="4dp"
+        android:padding="5dp"
+        android:textSize="23sp"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_htips"
         android:background="#90A4AE"
-        android:text="Health Tips"/>
+        android:text="Health Tips"
+        android:layout_margin="4dp"
+        android:padding="5dp"
+        android:textSize="23sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_food"
         android:background="#78909C"
-        android:text="Cancer Preventive Food"/>
+        android:text="Cancer Preventive Food"
+        android:layout_margin="4dp"
+        android:padding="5dp"
+        android:textSize="23sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/info_glossary"
         android:background="#607D8B"
-        android:text="Glossary"/>
+        android:text="Glossary"
+        android:layout_margin="4dp"
+        android:padding="5dp"
+        android:textSize="23sp"/>
 
 </LinearLayout>

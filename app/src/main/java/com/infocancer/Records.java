@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,6 +27,12 @@ public class Records extends ActionBarActivity {
     Button add;
     ListView record;
     RecordListAdaptor adaptor;
+    public final static String r_data1 = "rdata1";
+    public final static String r_data2 = "rdata2";
+    public final static String r_data3 = "rdata3";
+    public final static String r_data4 = "rdata4";
+    public final static String r_data5 = "rdata5";
+    public final static String r_data6 = "rdata6";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +92,7 @@ public class Records extends ActionBarActivity {
 
             TextView title;
             TextView date;
+            LinearLayout recordlist;
 
             inflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -95,9 +103,23 @@ public class Records extends ActionBarActivity {
 
             title = (TextView) itemView.findViewById(R.id.rltitle);
             date = (TextView) itemView.findViewById(R.id.rldate);
+            recordlist = (LinearLayout) itemView.findViewById(R.id.re_li);
 
             title.setText(resultp.gettitle());
             date.setText(resultp.getdate());
+            recordlist.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent  = new Intent(getApplicationContext(),ViewRecord.class);
+//                    intent.putExtra(r_data1,resultp.gettitle());
+//                    intent.putExtra(r_data2,resultp.getdate());
+//                    intent.putExtra(r_data3,resultp.getname());
+//                    intent.putExtra(r_data4,resultp.getdiagnose());
+//                    intent.putExtra(r_data5,resultp.getRimg());
+//                    intent.putExtra(r_data6,resultp.getPimg());
+                    startActivity(intent);
+                }
+            });
 
             return itemView;
 

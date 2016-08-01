@@ -41,6 +41,8 @@ public class DB{
     private static final String[] ALL_TABLES = {REPORT};
 
     private static final String USER_CREATE = "create table reports(title text not null," + "id text not null,"+"date text not null,"+"name text not null,"+"diagnose text not null,"+"prescribtion_img blob,"+"report_img blob);";
+    private static final String REM_CREATE = "create table reports(title text not null," + "id text not null,"+"date text not null,"+"name text not null,"+"diagnose text not null,"+"prescribtion_img blob,"+"report_img blob);";
+
     /**
      * ****** Used to open database in syncronized way ********
      */

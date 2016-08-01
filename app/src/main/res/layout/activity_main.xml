@@ -22,32 +22,32 @@
     <ImageButton
         android:background="#01579B"
         android:layout_marginRight="1dp"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
+        android:layout_width="71dp"
+        android:layout_height="70dp"
         android:id="@+id/m_info"
         android:src="@drawable/info_icon"/>
 
     <ImageButton
         android:background="#01579B"
         android:layout_marginRight="1dp"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
+        android:layout_width="71dp"
+        android:layout_height="70dp"
         android:id="@+id/m_record"
         android:src="@drawable/record_icon"/>
 
     <ImageButton
         android:background="#01579B"
         android:layout_marginRight="1dp"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
+        android:layout_width="71dp"
+        android:layout_height="70dp"
         android:id="@+id/m_reminder"
         android:src="@drawable/reminder_icon"/>
 
     <ImageButton
         android:background="#01579B"
         android:layout_marginRight="1dp"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
+        android:layout_width="71dp"
+        android:layout_height="70dp"
         android:id="@+id/m_hospital"
         android:src="@drawable/hospital_icon" />
 
@@ -55,8 +55,8 @@
     <ImageButton
         android:background="#01579B"
         android:layout_marginRight="1dp"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
+        android:layout_width="71dp"
+        android:layout_height="70dp"
         android:id="@+id/m_ngo"
         android:src="@drawable/ngo_icon"/>
 
