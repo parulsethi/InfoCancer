@@ -111,12 +111,12 @@ public class Records extends ActionBarActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent  = new Intent(getApplicationContext(),ViewRecord.class);
-//                    intent.putExtra(r_data1,resultp.gettitle());
-//                    intent.putExtra(r_data2,resultp.getdate());
-//                    intent.putExtra(r_data3,resultp.getname());
-//                    intent.putExtra(r_data4,resultp.getdiagnose());
-//                    intent.putExtra(r_data5,resultp.getRimg());
-//                    intent.putExtra(r_data6,resultp.getPimg());
+                    intent.putExtra(r_data1,resultp.gettitle());
+                    intent.putExtra(r_data2,resultp.getdate());
+                    intent.putExtra(r_data3,resultp.getname());
+                    intent.putExtra(r_data4,resultp.getdiagnose());
+                    intent.putExtra(r_data5,resultp.getRimg());
+                    intent.putExtra(r_data6,resultp.getPimg());
                     startActivity(intent);
                 }
             });

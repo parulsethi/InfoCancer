@@ -21,6 +21,13 @@ public class ViewRecord extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_record);
 
+        title = (TextView) findViewById(R.id.v_title);
+        date = (TextView) findViewById(R.id.v_date);
+        doc = (TextView) findViewById(R.id.v_doctor);
+        diagnose = (TextView) findViewById(R.id.v_diagnose);
+        r = (ImageView) findViewById(R.id.v_report);
+        p = (ImageView) findViewById(R.id.v_prescription);
+
         Intent intent = getIntent();
         byte[] ir = intent.getByteArrayExtra(Records.r_data5);
         byte[] ip = intent.getByteArrayExtra(Records.r_data6);
