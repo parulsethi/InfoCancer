@@ -114,10 +114,50 @@ public class DB{
         return DBHelper.getReadableDatabase();
     }
 
-    public static void add_reminder(){
+    public static void add_reminder(Reminder_info info){
 
+        String med = info.getmed();
+        String dos = info.getdos();
+        String tim =  info.gettim();
 
+        final SQLiteDatabase db = open();
+
+        ContentValues cVal = new ContentValues();
+        cVal.put(MEDICINE,med);
+        cVal.put(DOSAGE,dos);
+        cVal.put(TIME,tim);
+
+        db.insert(REMINDER, null, cVal);
+        db.close();
     }
+
+    public static ArrayList<Reminder_info> getAllReminderData() {
+
+        final SQLiteDatabase db = open1();
+
+        String selectQuery = "SELECT  * FROM " + REMINDER;
+        ArrayList<Reminder_info> reminderList = new ArrayList<Reminder_info>();
+
+        // Open database for Read / Write
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Reminder_info data = new Reminder_info();
+
+                data.setmed(cursor.getString(0));
+                data.setdos(cursor.getString(1));
+                data.settim(cursor.getString(2));
+
+                reminderList.add(data);
+                Log.d("rem_data",reminderList+"");
+
+            } while (cursor.moveToNext());
+        }
+        return reminderList;
+    }
+
     public static void add_report(Patient_info data) {
 
         // Open database for Read / Write

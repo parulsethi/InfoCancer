@@ -7,6 +7,8 @@ public class Reminder_info {
 
     String _med,_dos,_tim;
 
+    public Reminder_info(){}
+
     public Reminder_info(String med,String dos,String tim){
         this._med = med;
         this._dos = dos;
