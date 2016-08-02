@@ -6,6 +6,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,16 +25,25 @@ public class Reminder extends ActionBarActivity {
     private PendingIntent pendingIntent;
     int hour,minutes;
     TextView time;
-    Button set;
+    Button set,add;
+    CardView cv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminder);
 
+        add = (Button) findViewById(R.id.add_but);
         set = (Button) findViewById(R.id.set_rem);
         time = (TextView) findViewById(R.id.time_text);
         TimePicker tp = (TimePicker) findViewById(R.id.rem_time);
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cv.setVisibility(View.VISIBLE );
+            }
+        });
         tp.setIs24HourView(true);
 
         tp.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {

@@ -32,6 +32,7 @@ public class AddRecord extends ActionBarActivity {
     Button p_click,r_click,save;
     byte[] p_img,r_img;
     String dtitle,ddate,ddiagnose,ddoctor;
+    int f = 0;
 
     // Activity request codes
     private static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE = 100;
@@ -59,6 +60,14 @@ public class AddRecord extends ActionBarActivity {
         p_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                f=0;
+                captureImage();
+            }
+        });
+        r_click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                f=1;
                 captureImage();
             }
         });
@@ -68,7 +77,7 @@ public class AddRecord extends ActionBarActivity {
             public void onClick(View v) {
                 DB.init(getApplicationContext());
                 Bitmap b1 = ((BitmapDrawable)p_preview.getDrawable()).getBitmap();
-                Bitmap b2 = ((BitmapDrawable)p_preview.getDrawable()).getBitmap();
+                Bitmap b2 = ((BitmapDrawable)r_preview.getDrawable()).getBitmap();
                 ByteArrayOutputStream bos1=new ByteArrayOutputStream();
                 ByteArrayOutputStream bos2 = new ByteArrayOutputStream();
                 b1.compress(Bitmap.CompressFormat.PNG, 100, bos1);
@@ -118,20 +127,30 @@ public class AddRecord extends ActionBarActivity {
     }
 
     private void previewCapturedImage() {
-        try {
-            p_preview.setVisibility(View.VISIBLE);
-
-            BitmapFactory.Options options = new BitmapFactory.Options();
-
-            // downsizing image as it throws OutOfMemory Exception for larger images
-            options.inSampleSize = 8;
-
-            final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
-                    options);
-            p_preview.setImageBitmap(bitmap);
-        } catch (NullPointerException e) {
-            e.printStackTrace();
-        }
+        if (f == 0)
+            try {
+                p_preview.setVisibility(View.VISIBLE);
+                BitmapFactory.Options options = new BitmapFactory.Options();
+                // downsizing image as it throws OutOfMemory Exception for larger images
+                options.inSampleSize = 8;
+                final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
+                        options);
+                p_preview.setImageBitmap(bitmap);
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
+        else
+            try {
+                r_preview.setVisibility(View.VISIBLE);
+                BitmapFactory.Options options = new BitmapFactory.Options();
+                // downsizing image as it throws OutOfMemory Exception for larger images
+                options.inSampleSize = 8;
+                final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
+                        options);
+                r_preview.setImageBitmap(bitmap);
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
     }
 
     public Uri getOutputMediaFileUri(int type) {
