@@ -63,8 +63,6 @@ public class Reminder extends ActionBarActivity {
         adaptor = new ReminderListAdaptor(Reminder.this, arraylist);
         reminder.setAdapter(adaptor);
 
-        add = (Button) findViewById(R.id.add_record);
-
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
