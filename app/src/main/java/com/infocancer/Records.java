@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,7 +20,14 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.zip.Deflater;
 
 
 public class Records extends ActionBarActivity {
@@ -115,8 +123,56 @@ public class Records extends ActionBarActivity {
                     intent.putExtra(r_data2,resultp.getdate());
                     intent.putExtra(r_data3,resultp.getname());
                     intent.putExtra(r_data4,resultp.getdiagnose());
-                    intent.putExtra(r_data5,resultp.getRimg());
-                    intent.putExtra(r_data6,resultp.getPimg());
+
+                    byte[] input1 = resultp.getRimg();
+                    byte[] input2 = resultp.getPimg();
+
+                    // Compressor with highest level of compression
+                    Deflater compressor1 = new Deflater();
+                    Deflater compressor2 = new Deflater();
+                    compressor1.setLevel(Deflater.BEST_COMPRESSION);
+                    compressor2.setLevel(Deflater.BEST_COMPRESSION);
+
+                    // Give the compressor the data to compress
+                    compressor1.setInput(input1);
+                    compressor2.setInput(input2);
+                    compressor1.finish();
+                    compressor2.finish();
+
+                    // Create an expandable byte array to hold the compressed data.
+                    // It is not necessary that the compressed data will be smaller than
+                    // the uncompressed data.
+                    ByteArrayOutputStream bos1 = new ByteArrayOutputStream(input1.length);
+                    ByteArrayOutputStream bos2 = new ByteArrayOutputStream(input2.length);
+
+                    // Compress the data
+                    byte[] buf1 = new byte[1024];
+                    while (!compressor1.finished()) {
+                        int count = compressor1.deflate(buf1);
+                        bos1.write(buf1, 0, count);
+                    }
+                    try {
+                        bos1.close();
+                    } catch (IOException e) {
+                    }
+
+                    byte[] buf2 = new byte[1024];
+                    while (!compressor2.finished()) {
+                        int count = compressor2.deflate(buf2);
+                        bos2.write(buf2, 0, count);
+                    }
+                    try {
+                        bos2.close();
+                    } catch (IOException e) {
+                    }
+
+                    // Get the compressed data
+                    byte[] compressed1 = bos1.toByteArray();
+                    byte[] compressed2 = bos2.toByteArray();
+
+                    intent.putExtra(r_data5, compressed1);
+//                    intent.putExtra(r_data6,compressed2);
+
                     startActivity(intent);
                 }
             });
@@ -126,6 +182,35 @@ public class Records extends ActionBarActivity {
         }
     }
 
+    public static boolean saveFile(String fileName, Context context) {
+        try {
+            File sdDir = Environment.getExternalStorageDirectory();
+            String path = sdDir.getAbsolutePath();
+            File sgDir = new File(path);
+            if (!sgDir.exists()) {
+                sgDir.mkdirs();
+                sgDir.createNewFile();
+            }
+            FileWriter fw = new FileWriter(path + fileName);
+            BufferedWriter out = new BufferedWriter(fw);
+            String toSave = "I want to be saved in a file!";
+            out.write(toSave);
+            out.close();
+            return true;
+        }
+        catch (Exception ex) {
+            try {
+                FileOutputStream os = context.openFileOutput(fileName, 0);
+                String toSave = "I want to be saved in a file!";
+                os.write(toSave.getBytes());
+                os.flush();
+                os.close();
+                return true;
+            }
+            catch (Exception ex2) {}
+        }
+        return false;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

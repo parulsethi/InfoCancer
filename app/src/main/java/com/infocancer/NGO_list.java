@@ -38,7 +38,7 @@ public class NGO_list extends ActionBarActivity {
                 "1A Jangpura Mathura Road,\n" +
                 "New Delhi ? 110024\n" +
                 "Phone number: 6410962, 6121856, 3019328\n");
-        ngo4.setText(" Global Cancer Concern India (GCCI)\n" +
+        ngo4.setText("Global Cancer Concern India (GCCI)\n" +
                 "S?18/4, DLF Phase III\n" +
                 "Gurgaon 122002, Haryana\n" +
                 "Phone: 0124?2564473?75\n" +

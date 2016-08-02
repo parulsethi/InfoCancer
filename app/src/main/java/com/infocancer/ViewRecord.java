@@ -10,11 +10,17 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.zip.DataFormatException;
+import java.util.zip.Inflater;
+
 
 public class ViewRecord extends ActionBarActivity {
 
     TextView title,date,doc,diagnose;
     ImageView r,p;
+    byte[] ird,ipd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +36,47 @@ public class ViewRecord extends ActionBarActivity {
 
         Intent intent = getIntent();
         byte[] ir = intent.getByteArrayExtra(Records.r_data5);
-        byte[] ip = intent.getByteArrayExtra(Records.r_data6);
-
+//        byte[] ip = intent.getByteArrayExtra(Records.r_data6);
         title.setText(intent.getStringExtra(Records.r_data1));
         date.setText(intent.getStringExtra(Records.r_data2));
         doc.setText(intent.getStringExtra(Records.r_data3));
         diagnose.setText(intent.getStringExtra(Records.r_data4));
 
-        Bitmap bmp1 = BitmapFactory.decodeByteArray(ir, 0,ir.length);
+        try {
+            ird = decompress(ir);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (DataFormatException e) {
+            e.printStackTrace();
+        }
+
+//        try {
+//            ipd = decompress(ip);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (DataFormatException e) {
+//            e.printStackTrace();
+//        }
+
+        Bitmap bmp1 = BitmapFactory.decodeByteArray(ird,0,ird.length);
         r.setImageBitmap(bmp1);
 
-        Bitmap bmp2 = BitmapFactory.decodeByteArray(ip, 0, ip.length);
-        p.setImageBitmap(bmp2);
+//        Bitmap bmp2 = BitmapFactory.decodeByteArray(ipd, 0, ipd.length);
+//        p.setImageBitmap(bmp2);
+    }
+
+    public byte[] decompress(byte[] data) throws IOException, DataFormatException {
+        Inflater inflater = new Inflater();
+        inflater.setInput(data);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
+        byte[] buffer = new byte[1024];
+        while (!inflater.finished()) {
+            int count = inflater.inflate(buffer);
+            outputStream.write(buffer, 0, count);
+        }
+        outputStream.close();
+        byte[] output = outputStream.toByteArray();
+        return output;
     }
 
     @Override
