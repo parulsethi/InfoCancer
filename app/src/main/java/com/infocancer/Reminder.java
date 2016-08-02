@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -23,6 +24,7 @@ import java.util.Date;
 public class Reminder extends ActionBarActivity {
 
     private PendingIntent pendingIntent;
+    EditText med,dos;
     int hour,minutes;
     TextView time;
     Button set,add;
@@ -36,6 +38,9 @@ public class Reminder extends ActionBarActivity {
         add = (Button) findViewById(R.id.add_but);
         set = (Button) findViewById(R.id.set_rem);
         time = (TextView) findViewById(R.id.time_text);
+        cv = (CardView) findViewById(R.id.add_rem);
+        med = (EditText) findViewById(R.id.med_name);
+        dos = (EditText) findViewById(R.id.dosage);
         TimePicker tp = (TimePicker) findViewById(R.id.rem_time);
 
         add.setOnClickListener(new View.OnClickListener() {

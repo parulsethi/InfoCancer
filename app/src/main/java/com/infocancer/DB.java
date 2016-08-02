@@ -27,6 +27,7 @@ public class DB{
 
     // Table name
     private static final String REPORT = "reports";
+    private static final String REMINDER = "reminders";
 
     // Table Columns names
     private static final String ID = "id";
@@ -37,11 +38,14 @@ public class DB{
     private static final String REPORT_IMG = "report_img";
     private static final String PRESCRIBTION_IMG = "prescribtion_img";
 
+    private static final String MEDICINE = "medicine";
+    private static final String DOSAGE = "dosage";
+    private static final String TIME = "time";
 
-    private static final String[] ALL_TABLES = {REPORT};
+    private static final String[] ALL_TABLES = {REPORT,REMINDER};
 
     private static final String USER_CREATE = "create table reports(title text not null," + "id text not null,"+"date text not null,"+"name text not null,"+"diagnose text not null,"+"prescribtion_img blob,"+"report_img blob);";
-    private static final String REM_CREATE = "create table reports(title text not null," + "id text not null,"+"date text not null,"+"name text not null,"+"diagnose text not null,"+"prescribtion_img blob,"+"report_img blob);";
+    private static final String REM_CREATE = "create table reminders(medicine text not null," + "dosage text not null,"+"time text not null);";
 
     /**
      * ****** Used to open database in syncronized way ********
@@ -76,6 +80,7 @@ public class DB{
                 Log.i(LOG_TAG, "new create");
             try {
                 db.execSQL(USER_CREATE);
+                db.execSQL(REM_CREATE);
 
 
             } catch (Exception exception) {
@@ -109,6 +114,10 @@ public class DB{
         return DBHelper.getReadableDatabase();
     }
 
+    public static void add_reminder(){
+
+
+    }
     public static void add_report(Patient_info data) {
 
         // Open database for Read / Write

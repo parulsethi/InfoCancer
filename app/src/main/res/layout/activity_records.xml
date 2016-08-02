@@ -9,7 +9,7 @@
 
     <Button
         android:background="#0277BD"
-        android:textColor="#ec182b4f"
+        android:textColor="#ECEFF1"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_marginBottom="5dp"
