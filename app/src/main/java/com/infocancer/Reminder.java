@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -97,8 +98,12 @@ public class Reminder extends ActionBarActivity {
         set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("rem", String.valueOf(hour) + ":" + String.valueOf(minutes));
-                time.setText(String.valueOf(hour) + ":" + String.valueOf(minutes));
+                String t = String.valueOf(hour) + ":" + String.valueOf(minutes);
+                time.setText(t);
+
+                DB.init(getApplicationContext());
+                DB.add_reminder(new Reminder_info(med.getText().toString(), dos.getText().toString(),t));
+                Toast.makeText(getApplicationContext(), "Record Saved.", Toast.LENGTH_LONG).show();
             }
         });
 

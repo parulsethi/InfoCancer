@@ -20,7 +20,7 @@ public class DB{
      */
     public static final String LOG_TAG = "DB";
     // Database Version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Database Name
     private static final String DATABASE_NAME = "record";
