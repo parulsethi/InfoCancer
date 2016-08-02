@@ -1,8 +1,10 @@
 package com.infocancer;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
@@ -20,12 +24,14 @@ public class ViewRecord extends ActionBarActivity {
 
     TextView title,date,doc,diagnose;
     ImageView r,p;
-    byte[] ird,ipd;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_record);
+
+        intent = getIntent();
 
         title = (TextView) findViewById(R.id.v_title);
         date = (TextView) findViewById(R.id.v_date);
@@ -34,49 +40,22 @@ public class ViewRecord extends ActionBarActivity {
         r = (ImageView) findViewById(R.id.v_report);
         p = (ImageView) findViewById(R.id.v_prescription);
 
-        Intent intent = getIntent();
-        byte[] ir = intent.getByteArrayExtra(Records.r_data5);
-//        byte[] ip = intent.getByteArrayExtra(Records.r_data6);
         title.setText(intent.getStringExtra(Records.r_data1));
         date.setText(intent.getStringExtra(Records.r_data2));
         doc.setText(intent.getStringExtra(Records.r_data3));
         diagnose.setText(intent.getStringExtra(Records.r_data4));
 
-        try {
-            ird = decompress(ir);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (DataFormatException e) {
-            e.printStackTrace();
-        }
-
-//        try {
-//            ipd = decompress(ip);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } catch (DataFormatException e) {
-//            e.printStackTrace();
-//        }
-
-        Bitmap bmp1 = BitmapFactory.decodeByteArray(ird,0,ird.length);
+        Bitmap bmp1 = BitmapFactory.decodeFile(loadFile(intent.getStringExtra(Records.r_data1)));
         r.setImageBitmap(bmp1);
 
-//        Bitmap bmp2 = BitmapFactory.decodeByteArray(ipd, 0, ipd.length);
-//        p.setImageBitmap(bmp2);
+        Bitmap bmp2 = BitmapFactory.decodeFile(loadFile(intent.getStringExtra(Records.r_data4)));
+        p.setImageBitmap(bmp2);
     }
 
-    public byte[] decompress(byte[] data) throws IOException, DataFormatException {
-        Inflater inflater = new Inflater();
-        inflater.setInput(data);
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream(data.length);
-        byte[] buffer = new byte[1024];
-        while (!inflater.finished()) {
-            int count = inflater.inflate(buffer);
-            outputStream.write(buffer, 0, count);
-        }
-        outputStream.close();
-        byte[] output = outputStream.toByteArray();
-        return output;
+    public String loadFile(String fileName) {
+        String sdcardPath = Environment.getExternalStorageDirectory().toString()+"/"+fileName+".jpeg";
+        File imgFile = new  File(sdcardPath);
+        return imgFile.getAbsolutePath();
     }
 
     @Override
