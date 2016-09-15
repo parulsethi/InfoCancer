@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import org.w3c.dom.Text;
 
@@ -18,12 +18,12 @@ public class Information extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
 
-        TextView tumor = (TextView) findViewById(R.id.info_tumor);
-        TextView type = (TextView) findViewById(R.id.info_type);
-        TextView cause = (TextView) findViewById(R.id.info_causes);
-        TextView tips = (TextView) findViewById(R.id.info_htips);
-        TextView food = (TextView) findViewById(R.id.info_food);
-        TextView glossary = (TextView) findViewById(R.id.info_glossary);
+        ImageView tumor = (ImageView) findViewById(R.id.info_tumor);
+        ImageView type = (ImageView) findViewById(R.id.info_type);
+        ImageView cause = (ImageView) findViewById(R.id.info_causes);
+        ImageView tips = (ImageView) findViewById(R.id.info_htips);
+        ImageView food = (ImageView) findViewById(R.id.info_food);
+        ImageView glossary = (ImageView) findViewById(R.id.info_glossary);
 
         tumor.setOnClickListener(new View.OnClickListener() {
             @Override
