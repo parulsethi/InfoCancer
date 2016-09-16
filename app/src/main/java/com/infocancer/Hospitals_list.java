@@ -61,13 +61,13 @@ public class Hospitals_list extends ActionBarActivity {
                 "Email:- contact@mohandaioswalhospital.com");
         arraylist0.add("Dr. Chaturvedi Cancer Hospital and Research Institute Pvt. Ltd.\n" +
                 "Address: 189-c, Medical College Road\nBasharatpur , Gorakhpur");
-        arraylist0.add("Rajiv Gandhi Cancer Institute\nSector - 5, Rohini\n" + "Delhi - 110 085\n" + "Website:http://www.rgcirc.org/\n");
-        arraylist0.add("Apollo Hospital\n" + "Sarita Vihar, Delhi Mathura Road,\n" + "New Delhi - 110076 (INDIA)\n" + "Phone No: + 91 - 11 - 2692 5858 / 2692 5801\n" + "Email ID: assistance@apollohospitalsdelhi.com,\n" + "Website: http://www.apollohospdelhi.com/cancer-care-institute-overview\n");
-        arraylist0.add("Dharamshila Hospital and Research Centre\n" + "Near New Ashok Nagar Metro Station,\n" + "Vasundhara Enclave, Delhi - 110096\n" + "Tel: 011 - 43066353\n" + "Fax: 011 - 22617770 / 22619033 / 22618574\n" + "Email: contact@dhrc.in\n");
-        arraylist0.add("Action Cancer Hospital\n" + "A - 4, Paschim Vihar\n" + "New Delhi - 110063\n" + "Tel.: +91-11-49222222\n" + "Fax. : + 91-11-4502 4287\n" + "Email: - ach@actioncancerhospital.com\n");
-        arraylist0.add("Max Super Speciality Hospital\n" + "Enclave Road, Saket\n" + "New Delhi 110 017\n" + "Phone: +91 11 2651 5050\n" + "Fax: +91 11 2651 0050\n" + "Emergency No : +91 11 4055 4055\n" + "Appointment Helpline No: 8860 444 888\n");
-        arraylist0.add("Delhi State Cancer Institute\n" + "Dilshad Garden, Delhi 110 095 (India)\n" + "Phone: +91-11-2213 5700\n" + "Tele Fax: +91-11-2211 0505\n" + "E-mail: dsci.delhi@yahoo.co.in\n");
-        arraylist0.add("Fortis Flt. Lt. RajanDhall Hospital\n" + "Sector B, Pocket 1 Aruna Asaf Ali Marg,\n" + "Vasant Kunj ,New Delhi, 110070\n" + "Email:enquiries@fortishealthcare.com\n" + "Fax:+91 11 4277 6221\n");
+        arraylist0.add("Rajiv Gandhi Cancer Institute\nSector - 5, Rohini\n" + "Delhi - 110 085\n" + "Website:http://www.rgcirc.org/");
+        arraylist0.add("Apollo Hospital\n" + "Sarita Vihar, Delhi Mathura Road,\n" + "New Delhi - 110076 (INDIA)\n" + "Phone No: + 91 - 11 - 2692 5858 / 2692 5801\n" + "Email ID: assistance@apollohospitalsdelhi.com,\n" + "Website: http://www.apollohospdelhi.com/cancer-care-institute-overview");
+        arraylist0.add("Dharamshila Hospital and Research Centre\n" + "Near New Ashok Nagar Metro Station,\n" + "Vasundhara Enclave, Delhi - 110096\n" + "Tel: 011 - 43066353\n" + "Fax: 011 - 22617770 / 22619033 / 22618574\n" + "Email: contact@dhrc.in");
+        arraylist0.add("Action Cancer Hospital\n" + "A - 4, Paschim Vihar\n" + "New Delhi - 110063\n" + "Tel.: +91-11-49222222\n" + "Fax. : + 91-11-4502 4287\n" + "Email: - ach@actioncancerhospital.com");
+        arraylist0.add("Max Super Speciality Hospital\n" + "Enclave Road, Saket\n" + "New Delhi 110 017\n" + "Phone: +91 11 2651 5050\n" + "Fax: +91 11 2651 0050\n" + "Emergency No : +91 11 4055 4055\n" + "Appointment Helpline No: 8860 444 888");
+        arraylist0.add("Delhi State Cancer Institute\n" + "Dilshad Garden, Delhi 110 095 (India)\n" + "Phone: +91-11-2213 5700\n" + "Tele Fax: +91-11-2211 0505\n" + "E-mail: dsci.delhi@yahoo.co.in");
+        arraylist0.add("Fortis Flt. Lt. RajanDhall Hospital\n" + "Sector B, Pocket 1 Aruna Asaf Ali Marg,\n" + "Vasant Kunj ,New Delhi, 110070\n" + "Email:enquiries@fortishealthcare.com\n" + "Fax:+91 11 4277 6221");
 
         ArrayList<String> arraylist1 = new ArrayList<String>();
         arraylist1.add("Mahatma Gandhi Cancer Hospital and Research Institute\n" +
@@ -87,10 +87,10 @@ public class Hospitals_list extends ActionBarActivity {
                 "Dr. E. Borges Road,\n" +
                 "Dona Paula, Panaji,\n" +
                 "Goa 403 004.\n" +
-                "Ph : 1800 3001 4000\n");
+                "Ph : 1800 3001 4000");
         arraylist1.add("Sri Shankara Cancer Hospital and Research Centre\n" +
                 "Address: 1st Cross, Shankara Matt Premises\n Shankarapuram, Basavanagudi, Bengaluru, Karnataka 560004\n" +
-                "Phone: 080 2698 1101\n");
+                "Phone: 080 2698 1101");
         arraylist1.add("Regional Cancer Centre\n" +
                 "Address: Medical College Campus, Chalakkuzhi, Thiruvananthapuram, Kerala 695011\n" +
                 "Phone: 0471 244 2541");
@@ -156,7 +156,7 @@ public class Hospitals_list extends ActionBarActivity {
                 "INDIA - 831001\n" +
                 "\n" +
                 "Phone: +91 657 2427933, 2427944\n" +
-                "Internal Phone: 0657 2143311 \n");
+                "Internal Phone: 0657 2143311 ");
         arraylist3.add("Chittaranjan National Cancer Institute\n" +
                 "37,S.P.Mukherjee Road,Kolkata-700 026.INDIA\n" +
                 "Tel :(Off.)2475-9313/2475-8057\n" +

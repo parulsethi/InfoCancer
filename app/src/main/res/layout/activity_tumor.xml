@@ -17,6 +17,11 @@
     android:background="#FEFFEA"
     tools:context="com.infocancer.Tumor">
 
+    <include
+    android:id="@+id/tool_bar"
+    layout="@layout/tool_bar">
+    </include>
+
     <TextView android:text="Benign Tumor" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"

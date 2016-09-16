@@ -2,6 +2,7 @@ package com.infocancer;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -13,6 +14,11 @@ public class Tumor extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tumor);
+
+        Toolbar toolbar;
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
 
         TextView bdesc1 = (TextView) findViewById(R.id.b_desc1);
         TextView bdesc2 = (TextView) findViewById(R.id.b_desc2);

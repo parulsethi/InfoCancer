@@ -4,6 +4,10 @@
     android:background="#ECEFF1"
     tools:context="com.infocancer.ViewRecord">
 
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar">
+    </include>
     <android.support.v7.widget.CardView
         android:background="#ECEFF1"
         android:layout_marginLeft="4dp"

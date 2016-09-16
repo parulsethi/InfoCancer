@@ -5,6 +5,10 @@
     android:paddingTop="9dp"
     android:paddingBottom="9dp" tools:context="com.infocancer.Glossary">
 
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar">
+    </include>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

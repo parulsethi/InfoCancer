@@ -2,6 +2,7 @@ package com.infocancer;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +22,11 @@ public class Diet extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet);
+
+        Toolbar toolbar;
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
 
         garlic = (TextView) findViewById(R.id.d_garlic);
         turmeric = (TextView) findViewById(R.id.d_turmeric);

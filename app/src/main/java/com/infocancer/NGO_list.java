@@ -21,15 +21,13 @@ public class NGO_list extends ActionBarActivity {
 
     NGOListAdaptor adaptor,adaptor1,adaptor2,adaptor3;
     RecyclerView ngos,ngos1,ngos2,ngos3;
-    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ngo_list);
 
-//        toolbar = (Toolbar) findViewById(R.id.tool_bar);
-//        setSupportActionBar(toolbar);
 
         ngos = (RecyclerView) findViewById(R.id.ngo_rv);
         ngos.setLayoutManager(new GridLayoutManager(this, 1));

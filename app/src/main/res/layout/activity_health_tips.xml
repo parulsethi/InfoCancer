@@ -15,6 +15,11 @@
         tools:context="com.infocancer.HealthTips"
         android:orientation="vertical">
 
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar">
+        </include>
+
     <ImageButton
         android:layout_width="350dp"
         android:layout_height="wrap_content"

@@ -2,6 +2,7 @@ package com.infocancer;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -33,6 +34,11 @@ public class Hlung extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hlung);
+
+        Toolbar toolbar;
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
 
         GlossaryListAdapter adapter=new GlossaryListAdapter(this,tips,description);
         healthtips = (ListView)findViewById(R.id.htlung);
