@@ -40,11 +40,11 @@ public class Hospitals_list extends ActionBarActivity {
         hosp3.setNestedScrollingEnabled(false);
 
         ArrayList<String> arraylist0 = new ArrayList<String>();
-        arraylist0.add("AIIMS\n Sector - IRCH, Ansari Nagar East, New Delhi, Delhi, India " + "Phone - +91 11 2658 8500\n" + "Website:http://www.aiims.edu");
+        arraylist0.add("AIIMS\nSector - IRCH, Ansari Nagar East, New Delhi, Delhi, India " + "\nPhone - +91 11 2658 8500\n" + "Website:http://www.aiims.edu");
         arraylist0.add("Lord Dhanwantri Ayurvedic Cancer Hospital Rohtak, Haryana\n" +
-                "            Address: Jhang Colony Near Bajrang Bhawan Rohtak 124001 (Haryana),\n" +
-                "    Website- http://www.ayurveda.in/centers/lord-dhanwantri-ayurvedic-cancer-hospital-rohtak-631.html\n" +
-                "    Phone: +91. 9253873567");
+                "Address: Jhang Colony Near Bajrang Bhawan Rohtak 124001 (Haryana),\n" +
+                "Website- http://www.ayurveda.in/centers/lord-dhanwantri-ayurvedic-cancer-hospital-rohtak-631.html\n" +
+                "Phone: +91. 9253873567");
         arraylist0.add("Dr Yeshi Dhonden Cancer Treatment Clinic\n" +
                 "Dr Yeshi Dhonden Tibetan Herbal Clinic,\n" +
                 "Ashoka Niwas , Mcleod Ganj - 176219\n" +
@@ -54,11 +54,6 @@ public class Hospitals_list extends ActionBarActivity {
                 "J&K, India Pin: 193201 \n" +
                 "Tel: (+91) 1954 220631 / 224827\n" +
                 "email: shadsalim@hsshcc.org");
-        arraylist0.add("MOHANDAI OSWAL HOSPITAL\n" +
-                "GT ROAD, SHERPUR BY PASS, LUDHIANA-141009. PUNJAB\n" +
-                "PHONE:-0161-2676100, 101, 5094538, 39, 40\n" +
-                "TOLL FREE NUMBER:- 180018007000\n" +
-                "Email:- contact@mohandaioswalhospital.com");
         arraylist0.add("Dr. Chaturvedi Cancer Hospital and Research Institute Pvt. Ltd.\n" +
                 "Address: 189-c, Medical College Road\nBasharatpur , Gorakhpur");
         arraylist0.add("Rajiv Gandhi Cancer Institute\nSector - 5, Rohini\n" + "Delhi - 110 085\n" + "Website:http://www.rgcirc.org/");
@@ -109,8 +104,7 @@ public class Hospitals_list extends ActionBarActivity {
                 "Sardar Patel Road, Adyar,\n" +
                 "Chennai - 600 020\n" +
                 "Phone No-044 22209150");
-        arraylist1.add("\n" +
-                "MNJ Institute of Oncology & Regional Cancer Centre,\n" +
+        arraylist1.add("MNJ Institute of Oncology & Regional Cancer Centre,\n" +
                 "Red Hills, Lakadikapul,\n" +
                 "Hyderabad 500004\n" +
                 "TELANGANA - INDIA\n" +
@@ -144,8 +138,7 @@ public class Hospitals_list extends ActionBarActivity {
                 "11th Mile, Amerigog, Jorabat, G.S Road\n" +
                 "Guwahati:-781023\n" +
                 "Assam, India");
-        arraylist3.add("\n" +
-                "Mahavir Cancer Sansthan & Research Centre (MCSRC)\n" +
+        arraylist3.add("Mahavir Cancer Sansthan & Research Centre (MCSRC)\n" +
                 "Phulwarisharif, Patna - 801505\n" +
                 "Phone No: +91 - 612 - 2250127 / 2253956/ 3222583 \n" +
                 "Fax No: +91 – 612 – 2253957, \n" +
@@ -153,9 +146,7 @@ public class Hospitals_list extends ActionBarActivity {
         arraylist3.add("Meherbai Tata memorial Hospital\n" +
                 "Stocking Road, Northern Town,\n" +
                 "Bistupur, Jamshedpur, Jharkhand\n" +
-                "INDIA - 831001\n" +
-                "\n" +
-                "Phone: +91 657 2427933, 2427944\n" +
+                "INDIA - 831001\n" +"Phone: +91 657 2427933, 2427944\n" +
                 "Internal Phone: 0657 2143311 ");
         arraylist3.add("Chittaranjan National Cancer Institute\n" +
                 "37,S.P.Mukherjee Road,Kolkata-700 026.INDIA\n" +
