@@ -2,15 +2,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:fillViewport="true"
-    android:background="#F5F5F5"
-    android:layout_marginTop="1dp">
+    android:fillViewport="true">
     <LinearLayout
-        xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context="com.infocancer.Hospitals_list">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="match_parent"
@@ -23,311 +19,131 @@
             android:gravity="bottom|center_horizontal"
             android:layout_gravity="center_horizontal" />
 
-        <LinearLayout
-            android:layout_margin="7dp"
-            android:background="#F5F5F5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+
+
         <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
+            android:layout_margin="5dp"
+            android:background="#F1F8E9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/aiims1"
-            android:clickable="true"
-            android:onClick="togggle_content1">
+            android:id="@+id/hosp0">
             <LinearLayout
+                android:background="#F1F8E9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
+                    android:textSize="20sp"
                     android:textStyle="bold"
+                    android:textColor="#21482C"
+                    android:layout_gravity="center"
+                    android:id="@+id/north_text"
+                    android:background="#F1F8E9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="North India Region"/>
+                <android.support.v7.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/aiims2"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/hosp_rv"
+                    />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_margin="5dp"
+            android:background="#F1F8E9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hosp1">
+            <LinearLayout
+                android:background="#E1F5FE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
                 <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#01579B"
+                    android:layout_gravity="center"
+                    android:background="#E1F5FE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="South India Region"/>
+                <android.support.v7.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/aiims3"
-                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/hosp_rv1"
                     />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
+            android:layout_margin="5dp"
+            android:background="#F1F8E9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rgci1"
-            android:clickable="true"
-            android:onClick="togggle_content2">
+            android:id="@+id/hosp2">
             <LinearLayout
+                android:background="#E0F2F1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
+                    android:textSize="20sp"
                     android:textStyle="bold"
+                    android:textColor="#006064"
+                    android:layout_gravity="center"
+                    android:background="#E0F2F1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="West India Region"/>
+                <android.support.v7.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rgci2"/>
-                <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rgci3"
-                    android:visibility="gone"
-                    />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/apollo1"
-            android:clickable="true"
-            android:onClick="togggle_content3">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/apollo2"/>
-                <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/apollo3"
-                    android:visibility="gone"
-                    />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/dharam1"
-            android:clickable="true"
-            android:onClick="togggle_content4">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dharam2"/>
-                <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dharam3"
-                    android:visibility="gone"
-                    />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/irch1"
-            android:clickable="true"
-            android:onClick="togggle_content5">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/irch2"/>
-                <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/irch3"
-                    android:visibility="gone"
-                    />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/fortis1"
-            android:clickable="true"
-            android:onClick="togggle_content6">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/fortis2"/>
-                <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/fortis3"
-                    android:visibility="gone"
-                    />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/action1"
-            android:clickable="true"
-            android:onClick="togggle_content7">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/action2"/>
-                <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/action3"
-                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/hosp_rv2"
                     />
             </LinearLayout>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
+            android:layout_margin="5dp"
+            android:background="#E0F7FA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/blk1"
-            android:clickable="true"
-            android:onClick="togggle_content8">
+            android:id="@+id/hosp3">
             <LinearLayout
+                android:background="#E0F7FA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
+                    android:textSize="20sp"
                     android:textStyle="bold"
+                    android:textColor="#00B8D4"
+                    android:layout_gravity="center"
+                    android:background="#E0F7FA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="East India Region"/>
+                <android.support.v7.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/blk2"/>
-                <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/blk3"
-                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/hosp_rv3"
                     />
             </LinearLayout>
         </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/max1"
-            android:clickable="true"
-            android:onClick="togggle_content9">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/max2"/>
-                <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/max3"
-                    android:visibility="gone"
-                    />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_marginBottom="7dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/dsc1"
-            android:clickable="true"
-            android:onClick="togggle_content10">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginLeft="6dp"
-                    android:textColor="#ec182b4f"
-                    android:background="#EEEEEE"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dsc2"/>
-                <TextView
-                    android:textColor="#ec182b4f"
-                    android:layout_marginLeft="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/dsc3"
-                    android:visibility="gone"
-                    />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-        </LinearLayout>
-
 
 </LinearLayout>
     </ScrollView>
