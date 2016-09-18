@@ -3,19 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="wrap_content" android:orientation="vertical">
 
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="9dp"
-    android:paddingRight="9dp"
-    android:paddingTop="9dp"
-    android:paddingBottom="9dp" tools:context="com.infocancer.Glossary">
-
     <include
         android:id="@+id/tool_bar"
         layout="@layout/tool_bar">
     </include>
 
+    <RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="9dp"
+    android:paddingRight="9dp"
+    android:paddingTop="9dp"
+    android:paddingBottom="9dp" tools:context="com.infocancer.Glossary">
+
     <ListView
-        android:layout_below="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/glossry">
