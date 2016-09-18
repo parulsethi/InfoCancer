@@ -5,53 +5,36 @@
     android:background="#FAFAFA"
     tools:context="com.infocancer.Information">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="130dp">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="190dp"
         android:src="@drawable/nutritiontrends"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="#ECEFF1"
-            android:id="@+id/textView"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:paddingStart="50dp" />
-    </RelativeLayout>
 
 
     <android.support.v7.widget.CardView
-        android:layout_margin="4dp"
-        android:background="#ECEFF1"
+        android:layout_margin="6dp"
+        android:background="#B2DFDB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ECEFF1">
+            android:background="#B2DFDB">
         <TextView
             android:id="@+id/tumor_text"
             android:layout_marginLeft="6dp"
             android:padding="5dp"
             android:textSize="23sp"
-            android:textColor="#ec182b4f"
+            android:textColor="#263238"
             android:textStyle="bold"
-            android:background="#ECEFF1"
+            android:background="#B2DFDB"
             android:text="Tumor: Benign vs. Malignant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <ImageView
             android:background="#ECEFF1"
-            android:paddingTop="4dp"
-            android:paddingBottom="2dp"
-            android:paddingRight="4dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="2dp"
             android:id="@+id/info_tumor"
             android:layout_width="40dp"
             android:layout_height="35dp"
@@ -61,120 +44,128 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:layout_margin="4dp"
-        android:background="#ECEFF1"
+        android:layout_margin="6dp"
+        android:background="#FFECB3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ECEFF1">
+            android:background="#FFECB3">
             <TextView
                 android:id="@+id/type_text"
                 android:layout_marginLeft="6dp"
                 android:padding="5dp"
                 android:textSize="23sp"
-                android:textColor="#ec182b4f"
+                android:textColor="#263238"
                 android:textStyle="bold"
-                android:background="#ECEFF1"
+                android:background="#FFECB3"
                 android:text="Types of Cancer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <ImageView
+                android:paddingTop="6dp"
+                android:paddingEnd="2dp"
                 android:background="#ECEFF1"
                 android:id="@+id/info_type"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:src="@drawable/arrow"
                 android:layout_alignParentEnd="true"/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:layout_margin="4dp"
-        android:background="#ECEFF1"
+        android:layout_margin="6dp"
+        android:background="#FFCDD2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ECEFF1">
+            android:background="#FFCDD2">
             <TextView
                 android:id="@+id/cause_text"
                 android:layout_marginLeft="6dp"
                 android:padding="5dp"
                 android:textSize="23sp"
-                android:textColor="#ec182b4f"
+                android:textColor="#263238"
                 android:textStyle="bold"
-                android:background="#ECEFF1"
+                android:background="#FFCDD2"
                 android:text="Causes of Cancer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <ImageView
+                android:paddingTop="6dp"
+                android:paddingEnd="2dp"
                 android:background="#ECEFF1"
                 android:id="@+id/info_causes"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:src="@drawable/arrow"
                 android:layout_alignParentEnd="true"/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:layout_margin="4dp"
-        android:background="#ECEFF1"
+        android:layout_margin="6dp"
+        android:background="#B2EBF2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ECEFF1">
+            android:background="#B2EBF2">
             <TextView
                 android:id="@+id/htips_text"
                 android:layout_marginLeft="6dp"
                 android:padding="5dp"
                 android:textSize="23sp"
-                android:textColor="#ec182b4f"
+                android:textColor="#263238"
                 android:textStyle="bold"
-                android:background="#ECEFF1"
+                android:background="#B2EBF2"
                 android:text="Health Tips"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <ImageView
+                android:paddingTop="6dp"
+                android:paddingEnd="2dp"
                 android:background="#ECEFF1"
                 android:id="@+id/info_htips"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:src="@drawable/arrow"
                 android:layout_alignParentEnd="true"/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:layout_margin="4dp"
-        android:background="#ECEFF1"
+        android:layout_margin="6dp"
+        android:background="#DCEDC8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ECEFF1">
+            android:background="#DCEDC8">
             <TextView
                 android:id="@+id/food_text"
                 android:layout_marginLeft="6dp"
                 android:padding="5dp"
                 android:textSize="23sp"
-                android:textColor="#ec182b4f"
+                android:textColor="#263238"
                 android:textStyle="bold"
-                android:background="#ECEFF1"
+                android:background="#DCEDC8"
                 android:text="Cancer Preventive Food"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <ImageView
+                android:paddingTop="6dp"
+                android:paddingEnd="2dp"
                 android:background="#ECEFF1"
                 android:id="@+id/info_food"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:src="@drawable/arrow"
                 android:layout_alignParentEnd="true"/>
         </RelativeLayout>
@@ -182,30 +173,32 @@
 
 
     <android.support.v7.widget.CardView
-        android:layout_margin="4dp"
-        android:background="#ECEFF1"
+        android:layout_margin="6dp"
+        android:background="#FFE0B2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ECEFF1">
+            android:background="#FFE0B2">
             <TextView
                 android:id="@+id/glossary_text"
                 android:layout_marginLeft="6dp"
                 android:padding="5dp"
                 android:textSize="23sp"
-                android:textColor="#ec182b4f"
+                android:textColor="#263238"
                 android:textStyle="bold"
-                android:background="#ECEFF1"
+                android:background="#FFE0B2"
                 android:text="Glossary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <ImageView
+                android:paddingTop="6dp"
+                android:paddingEnd="2dp"
                 android:background="#ECEFF1"
                 android:id="@+id/info_glossary"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:src="@drawable/arrow"
                 android:layout_alignParentEnd="true"
                 />

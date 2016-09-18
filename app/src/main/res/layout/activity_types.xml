@@ -1,6 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#FEFFEA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar">
+    </include>
+
+<LinearLayout
+    android:background="#F9FBE7"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -8,10 +17,6 @@
     android:paddingTop="23dp"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.infocancer.Types">
 
-    <include
-        android:id="@+id/tool_bar"
-        layout="@layout/tool_bar">
-    </include>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -101,5 +106,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp" />
 
+</LinearLayout>
 </LinearLayout>
 </LinearLayout>
