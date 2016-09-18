@@ -3,9 +3,16 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:fillViewport="true"
-    android:background="#FEFFEA"
-    android:layout_marginTop="1dp">
+    android:background="#FEFFEA">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar">
+    </include>
     <LinearLayout
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,11 +23,6 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="#FEFFEA"
     tools:context="com.infocancer.Tumor">
-
-    <include
-    android:id="@+id/tool_bar"
-    layout="@layout/tool_bar">
-    </include>
 
     <TextView android:text="Benign Tumor" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -65,4 +67,5 @@
         android:textColor="#ec182b4f"/>
 
 </LinearLayout>
+    </LinearLayout>
 </ScrollView>

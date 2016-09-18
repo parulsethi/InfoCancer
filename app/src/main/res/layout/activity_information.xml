@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <ImageView
-            android:background="#ECEFF1"
+            android:background="#B2DFDB"
             android:paddingTop="6dp"
             android:paddingEnd="2dp"
             android:id="@+id/info_tumor"
@@ -66,7 +66,7 @@
             <ImageView
                 android:paddingTop="6dp"
                 android:paddingEnd="2dp"
-                android:background="#ECEFF1"
+                android:background="#FFECB3"
                 android:id="@+id/info_type"
                 android:layout_width="40dp"
                 android:layout_height="35dp"
@@ -98,7 +98,7 @@
             <ImageView
                 android:paddingTop="6dp"
                 android:paddingEnd="2dp"
-                android:background="#ECEFF1"
+                android:background="#FFCDD2"
                 android:id="@+id/info_causes"
                 android:layout_width="40dp"
                 android:layout_height="35dp"
@@ -130,7 +130,7 @@
             <ImageView
                 android:paddingTop="6dp"
                 android:paddingEnd="2dp"
-                android:background="#ECEFF1"
+                android:background="#B2EBF2"
                 android:id="@+id/info_htips"
                 android:layout_width="40dp"
                 android:layout_height="35dp"
@@ -162,7 +162,7 @@
             <ImageView
                 android:paddingTop="6dp"
                 android:paddingEnd="2dp"
-                android:background="#ECEFF1"
+                android:background="#DCEDC8"
                 android:id="@+id/info_food"
                 android:layout_width="40dp"
                 android:layout_height="35dp"
@@ -195,7 +195,7 @@
             <ImageView
                 android:paddingTop="6dp"
                 android:paddingEnd="2dp"
-                android:background="#ECEFF1"
+                android:background="#FFE0B2"
                 android:id="@+id/info_glossary"
                 android:layout_width="40dp"
                 android:layout_height="35dp"

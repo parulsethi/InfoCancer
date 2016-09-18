@@ -1,11 +1,11 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:fillViewport="true">
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <include
@@ -77,8 +77,10 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rem_list">
+        android:layout_height="match_parent"
+        android:id="@+id/rem_list"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2.0sp">
     </ListView>
 </LinearLayout>
 

@@ -3,8 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="true"
-    android:background="#FEFFEA"
-    android:layout_marginTop="1dp">
+    android:background="#FEFFEA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar">
+    </include>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,10 +24,6 @@
         tools:context="com.infocancer.HealthTips"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/tool_bar"
-            layout="@layout/tool_bar">
-        </include>
 
     <ImageButton
         android:layout_width="350dp"
@@ -64,4 +69,5 @@
 
 
 </LinearLayout>
+    </LinearLayout>
 </ScrollView>
